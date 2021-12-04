@@ -16,6 +16,33 @@ public class ExamCDPRC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        String employees[][] = {
+            {"1", "Alice"},
+            {"2", "John"},
+            {"3", "Jane"},
+            {"4", "Alice"},
+            {"5", "Bob"}};
+
+        String files[][] = {
+            {"100", "jpeg"},
+            {"Alice", "png"},
+            {"3", "jpg"},
+            {"1", "jpg"},
+            {"John", "jpeg"}
+        };
+        
+        Problem1 p1 = new Problem1();
+        String [][] EmployeeList = p1.findEmployeeList(employees, files);
+        int totalUniqueFile = EmployeeList.length;
+        
+        /*
+        System.out.println("Employee_id------ File Type");
+        for (int i = 0; i < res.length; i++) {
+            String re = res[i][0]+"------ "+res[i][1];
+            System.out.println(""+re);
+            
+        }*/
     }
-    
+
 }
