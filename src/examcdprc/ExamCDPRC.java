@@ -66,7 +66,8 @@ public class ExamCDPRC {
         
         //SQL Queruy 
         String query = "SELECT Name, "
-                + "(SELECT Category form Categories where Score <= Min_Score AND Score <= Max_Score) Category "
+                + "(SELECT Category form Categories where Score <= Min_Score AND Score <= Max_Score) Category ,"
+                + "DECODE(((SELECT Category form Categories where Score <= Min_Score AND Score <= Max_Score)>3), true, 'Passed', 'Failed')"
                 + "FROM Students "
                 + "ORDER BY DESC ";
         
